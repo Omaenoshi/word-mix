@@ -1,0 +1,308 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  font-family: Poppins, Inter, sans-serif;
+}
+
+.signupModal {
+  width: 900px;
+  height: 600px;
+  background-color: white;
+  border-radius: 12px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.closeButton {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 24px;
+  color: rgb(117, 117, 117);
+  z-index: 10;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.closeButton:hover {
+  background-color: rgb(245, 245, 245);
+  color: rgb(51, 51, 51);
+}
+
+.modalLeftPanel {
+  flex: 1;
+  background: linear-gradient(
+    135deg,
+    rgb(26, 115, 235) 0%,
+    rgb(20, 100, 220) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.previewContent {
+  text-align: center;
+  color: white;
+}
+
+.previewHeader {
+  margin-bottom: 40px;
+}
+
+.previewTitle {
+  font-size: 35px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.previewSubtitle {
+  font-size: 18px;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.previewImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.figmaIcon,
+.reactIcon {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.figmaIcon {
+  background-color: rgb(162, 89, 255);
+  color: white;
+}
+
+.reactIcon {
+  background-color: rgb(97, 218, 251);
+  color: rgb(40, 44, 52);
+}
+
+.arrowIcon {
+  font-size: 24px;
+  color: white;
+  opacity: 0.8;
+}
+
+.previewDescription {
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.9;
+  max-width: 280px;
+}
+
+.modalRightPanel {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signupForm {
+  width: 100%;
+  max-width: 320px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 30px;
+}
+
+.logoIcon {
+  width: 32px;
+  height: 32px;
+  background-color: rgb(26, 115, 235);
+  color: white;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.logoText {
+  font-size: 18px;
+  font-weight: 500;
+  color: rgb(51, 51, 51);
+}
+
+.heading {
+  font-size: 24px;
+  font-weight: 700;
+  color: rgb(51, 51, 51);
+  margin: 0 0 24px 0;
+}
+
+.socialButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.socialButton {
+  height: 44px;
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 6px;
+  background-color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-family: Poppins, Inter, sans-serif;
+  font-size: 14px;
+  color: rgb(51, 51, 51);
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.socialButton:hover {
+  background-color: rgb(245, 245, 245);
+  border-color: rgb(204, 204, 204);
+}
+
+.socialIcon {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.socialButton:first-child .socialIcon {
+  background-color: rgb(219, 68, 55);
+  color: white;
+}
+
+.socialButton:last-child .socialIcon {
+  background-color: rgb(51, 51, 51);
+  color: white;
+}
+
+.divider {
+  margin: 24px 0;
+  text-align: center;
+  position: relative;
+}
+
+.divider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: rgb(221, 221, 221);
+}
+
+.dividerText {
+  background-color: white;
+  padding: 0 12px;
+  font-size: 12px;
+  color: rgb(117, 117, 117);
+}
+
+.emailForm {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.emailInput {
+  height: 44px;
+  padding: 0 16px;
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 6px;
+  font-family: Poppins, Inter, sans-serif;
+  font-size: 14px;
+  color: rgb(51, 51, 51);
+  background-color: white;
+}
+
+.emailInput:focus {
+  outline: 2px solid rgb(26, 115, 235);
+  border-color: rgb(26, 115, 235);
+}
+
+.emailInput::placeholder {
+  color: rgb(117, 117, 117);
+}
+
+.submitButton {
+  height: 44px;
+  border: none;
+  border-radius: 6px;
+  background-color: rgb(26, 115, 235);
+  color: white;
+  font-family: Poppins, Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.submitButton:hover:not(:disabled) {
+  background-color: rgb(20, 100, 220);
+}
+
+.submitButtonDisabled {
+  background-color: rgb(204, 204, 204);
+  cursor: not-allowed;
+}
+
+.terms {
+  font-size: 12px;
+  color: rgb(117, 117, 117);
+  line-height: 1.5;
+  text-align: center;
+}
+
+.termsLink {
+  color: rgb(26, 115, 235);
+  text-decoration: none;
+}
+
+.termsLink:hover {
+  text-decoration: underline;
+}

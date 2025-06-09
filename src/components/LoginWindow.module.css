@@ -1,0 +1,196 @@
+.loginContainer {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #fff;
+}
+
+@media (max-width: 640px) {
+  .loginContainer {
+    padding: 20px 15px !important;
+  }
+}
+
+.loginTitle {
+  font-family:
+    Inter,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  font-weight: 400;
+  font-size: 64px;
+  color: #000;
+  width: 270px;
+  height: 59px;
+  flex-shrink: 0;
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+@media (max-width: 991px) {
+  .loginTitle {
+    font-size: 48px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .loginTitle {
+    font-size: 36px !important;
+    width: auto !important;
+    margin-bottom: 20px !important;
+  }
+}
+
+.inputGroup {
+  width: 100%;
+  max-width: 740px;
+  margin-bottom: 10px;
+}
+
+.inputGroup:last-of-type {
+  margin-bottom: 104px;
+}
+
+.inputLabel {
+  font-family:
+    Inter,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 991px) {
+  .inputLabel {
+    font-size: 24px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .inputLabel {
+    font-size: 20px !important;
+  }
+}
+
+.inputWrapper {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  padding: 10px 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  border: 2px solid #000;
+  box-sizing: border-box;
+}
+
+.inputField {
+  font-family:
+    Inter,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #000;
+  width: 100%;
+  height: 41px;
+  flex-shrink: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.inputField::placeholder {
+  color: #000;
+  opacity: 1;
+}
+
+@media (max-width: 991px) {
+  .inputField {
+    font-size: 18px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .inputField {
+    font-size: 16px !important;
+  }
+}
+
+.buttonContainer {
+  width: 100%;
+  max-width: 740px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.loginButton,
+.registerButton {
+  display: flex;
+  width: 100%;
+  padding: 11px 0px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  height: 70px;
+  box-sizing: border-box;
+  background-color: #aaff98;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  .loginButton,
+  .registerButton {
+    height: 60px !important;
+  }
+}
+
+.buttonText {
+  font-family:
+    Inter,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  color: #000;
+  text-align: center;
+}
+
+@media (max-width: 991px) {
+  .buttonText {
+    font-size: 32px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .buttonText {
+    font-size: 24px !important;
+  }
+}
+
+.loginButton:hover,
+.registerButton:hover {
+  background-color: #98e885;
+  transition: background-color 0.2s ease;
+}
+
+.loginButton:active,
+.registerButton:active {
+  background-color: #85d572;
+}
