@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import styles from "./LoginWindow.module.css";
 
-function LoginWindow() {
+interface LoginWindowProps {
+  onGoToSignup: () => void;
+  onGoToStart: () => void;
+}
+
+function LoginWindow({ onGoToSignup, onGoToStart }: LoginWindowProps) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -11,7 +16,7 @@ function LoginWindow() {
   };
 
   const handleRegister = () => {
-      console.log("Login attempt:", { email, password });
+    onGoToSignup();
   };
 
   return (

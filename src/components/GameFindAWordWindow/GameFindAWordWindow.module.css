@@ -1,0 +1,215 @@
+.container {
+  background-color: rgba(255, 255, 255, 1);
+  display: flex;
+  padding: 37px 71px 85px;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: stretch;
+}
+
+.gameTitle {
+  color: rgba(0, 0, 0, 1);
+  font-size: 48px;
+  font-family:
+    Inter,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  font-weight: 400;
+  text-align: right;
+  align-self: center;
+}
+
+.contentWrapper {
+  margin-top: 50px;
+}
+
+.mainContent {
+  gap: 20px;
+  display: flex;
+}
+
+.imageColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  line-height: normal;
+  width: 50%;
+  margin-left: 0;
+}
+
+.gameImage {
+  aspect-ratio: 1.41;
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+  margin-top: 69px;
+}
+
+.buttonsColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  line-height: normal;
+  width: 50%;
+  margin-left: 20px;
+}
+
+.buttonsContainer {
+  width: 100%;
+}
+
+.buttonRow {
+  width: 100%;
+}
+
+.buttonRow:not(:first-child) {
+  margin-top: 30px;
+}
+
+.buttonRowInner {
+  gap: 20px;
+  display: flex;
+}
+
+.answerButton {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  line-height: normal;
+  width: 50%;
+  margin-left: 0;
+}
+
+.answerButton:last-child {
+  margin-left: 20px;
+}
+
+.answerButtonInner {
+  align-self: stretch;
+  min-height: 120px;
+  flex-grow: 1;
+  padding: 36px 32px;
+  gap: 10px;
+  font-family:
+    Inter,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  font-size: 40px;
+  color: rgba(0, 0, 0, 1);
+  font-weight: 400;
+  white-space: nowrap;
+  text-align: center;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+.purpleButton {
+  background-color: rgba(189, 113, 255, 1);
+}
+
+.greenButton {
+  background-color: rgba(163, 255, 113, 1);
+}
+
+.redButton {
+  background-color: rgba(255, 113, 113, 1);
+}
+
+.orangeButton {
+  background-color: rgba(255, 138, 54, 1);
+}
+
+.yellowButton {
+  background-color: rgba(255, 222, 113, 1);
+}
+
+.lightPurpleButton {
+  background-color: rgba(214, 152, 255, 1);
+}
+
+@media (max-width: 991px) {
+  .container {
+    padding: 37px 20px 85px;
+  }
+
+  .gameTitle {
+    font-size: 40px;
+  }
+
+  .contentWrapper {
+    max-width: 100%;
+    margin-top: 40px;
+  }
+
+  .mainContent {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .imageColumn {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .gameImage {
+    max-width: 100%;
+    margin-top: 40px;
+  }
+
+  .buttonsColumn {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .buttonsContainer {
+    max-width: 100%;
+    margin-top: 40px;
+  }
+
+  .buttonRow {
+    max-width: 100%;
+  }
+
+  .buttonRow:not(:first-child) {
+    margin-right: 3px;
+  }
+
+  .buttonRowInner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .answerButton {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .answerButton:last-child {
+    margin-left: 0;
+  }
+
+  .answerButtonInner {
+    margin-top: 33px;
+    padding: 36px 20px;
+    white-space: initial;
+  }
+
+  .answerButton:first-child .answerButtonInner {
+    margin-top: 33px;
+  }
+
+  .buttonRow:first-child .answerButton:first-child .answerButtonInner {
+    margin-top: 33px;
+  }
+
+  .buttonRow:not(:first-child) .answerButton:first-child .answerButtonInner {
+    margin-top: 30px;
+  }
+}

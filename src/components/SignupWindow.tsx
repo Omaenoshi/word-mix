@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import styles from "./SignupWindow.module.css";
 
-function SignupWindow() {
+interface SignupWindowProps {
+  onGoToLogin: () => void;
+  onGoToStart: () => void;
+}
+
+function SignupWindow({ onGoToLogin, onGoToStart }: SignupWindowProps) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -17,8 +22,7 @@ function SignupWindow() {
   };
 
   const handleBackToLogin = () => {
-    // Navigation logic would go here
-    console.log("Navigate back to login");
+    onGoToLogin();
   };
 
   return (
