@@ -52,7 +52,7 @@ function LoginWindow({ onGoToSignup, onGoToStart }: LoginWindowProps) {
     setError(null);
     console.log("handleLogin вызван");
     try {
-      const result = await postData("http://localhost:8001/user/login", {
+      const result = await postData("https://routinely-meet-sleeper.cloudpub.ru/user/login", {
         email,
         password,
       });

@@ -49,7 +49,7 @@ function GameFindAWordWindow({onGoToWin, }: GameProps): JSX.Element {
       }
 
       // Если сохранённой игры нет — запрашиваем с сервера
-      const response = await authFetch("http://localhost:8001/game/start", {
+      const response = await authFetch("https://routinely-meet-sleeper.cloudpub.ru/game/start", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -87,7 +87,7 @@ function GameFindAWordWindow({onGoToWin, }: GameProps): JSX.Element {
         answerId: wordId.toString(),
       });
 
-      const response = await authFetch(`http://localhost:8001/game/check-answer?${params.toString()}`, {
+      const response = await authFetch(`https://routinely-meet-sleeper.cloudpub.ru/game/check-answer?${params.toString()}`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
