@@ -47,14 +47,17 @@
   margin-top: 69px;
 }
 
-.buttonsColumn {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  line-height: normal;
-  width: 50%;
-  margin-left: 20px;
+.buttonsContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
+.answerButton {
+  width: 100%; /* по ширине ячейки сетки */
+  margin-left: 0;
+  margin-bottom: 0; /* в сетке за отступ отвечает gap */
+}
+
 
 .buttonsContainer {
   width: 100%;
@@ -74,16 +77,9 @@
 }
 
 .answerButton {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  line-height: normal;
-  width: 50%;
-  margin-left: 0;
-}
-
-.answerButton:last-child {
-  margin-left: 20px;
+  display: inline-flex; /* или inline-block */
+  /* убираем width: 50% */
+  margin-left: 0; /* или какой отступ нужен */
 }
 
 .answerButtonInner {
@@ -131,7 +127,21 @@
 .lightPurpleButton {
   background-color: rgba(214, 152, 255, 1);
 }
+.gameTitleWrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* расстояние между заголовком и словом */
+}
 
+.shuffledWord {
+  background-color: #a6f0c6; /* светло-зеленый фон */
+  color: #006633;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 3rem; /* было 2rem, сделал больше */
+  user-select: none;
+}
 @media (max-width: 991px) {
   .container {
     padding: 37px 20px 85px;
@@ -168,8 +178,11 @@
   }
 
   .buttonsContainer {
-    max-width: 100%;
-    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap; /* разрешить перенос */
+    gap: 10px;
+    justify-content: center; /* или flex-start, по желанию */
+    max-width: 400px; /* или другой фиксированный размер для ограничения */
   }
 
   .buttonRow {
@@ -184,11 +197,6 @@
     flex-direction: column;
     align-items: stretch;
     gap: 0;
-  }
-
-  .answerButton {
-    width: 100%;
-    margin-left: 0;
   }
 
   .answerButton:last-child {
