@@ -1,0 +1,298 @@
+.container {
+  width: 1280px;
+  height: 650px;
+  position: relative;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.userImage {
+  width: 250px;
+  height: 250px;
+  flex-shrink: 0;
+  position: absolute;
+  left: 63px;
+  top: 54px;
+}
+
+.avatarImage {
+  width: 250px;
+  height: 250px;
+  flex-shrink: 0;
+  aspect-ratio: 1/1;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+.greeting {
+  font-family:
+    Inter,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  font-weight: 400;
+  font-size: 64px;
+  color: #000;
+  width: 700px;
+  height: 80px;
+  flex-shrink: 0;
+  position: absolute;
+  left: 484px;
+  top: 54px;
+}
+
+.levelText {
+  font-family:
+    Inter,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  color: #000;
+  width: 237px;
+  height: 80px;
+  flex-shrink: 0;
+  position: absolute;
+  left: 69px;
+  top: 325px;
+}
+
+.historyFrame {
+  width: 860px;
+  height: 390px;
+  flex-shrink: 0;
+  position: absolute;
+  left: 383px;
+  top: 229px;
+}
+
+.historyBackground {
+  width: 880px;
+  height: 390px;
+  flex-shrink: 0;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background-color: #fff;
+}
+
+.historyContent {
+  display: inline-flex;
+  padding: 0px 0px 332px 2px;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  left: 20px;
+  top: 21px;
+  width: 840px;
+  height: 798px;
+}
+
+.historyText {
+  font-family:
+    Inter,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  color: #000;
+  white-space: pre-line;
+  width: 854px;
+  height: 467px;
+  position: absolute;
+  left: 2px;
+  top: -1px;
+}
+
+.playButton {
+  display: flex;
+  width: 240px;
+  height: 120px;
+  padding: 16px 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 30px;
+  position: absolute;
+  left: 56px;
+  top: 465px;
+  cursor: pointer;
+  background-color: #aaff98;
+}
+
+.playButtonText {
+  font-family:
+    Inter,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  color: #000;
+  text-align: center;
+  position: relative;
+}
+
+/* Tablet styles */
+@media (max-width: 991px) {
+  .container {
+    width: 100%;
+    max-width: 1024px;
+    height: auto;
+    min-height: 650px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .userImage {
+    width: 200px;
+    height: 200px;
+    left: 20px;
+    top: 20px;
+  }
+
+  .avatarImage {
+    width: 200px;
+    height: 200px;
+  }
+
+  .greeting {
+    font-size: 48px;
+    width: 500px;
+    height: 60px;
+    left: 250px;
+    top: 20px;
+  }
+
+  .levelText {
+    font-size: 32px;
+    width: 200px;
+    height: 60px;
+    left: 20px;
+    top: 240px;
+  }
+
+  .historyFrame {
+    width: 700px;
+    height: 320px;
+    left: 250px;
+    top: 180px;
+  }
+
+  .historyBackground {
+    width: 700px;
+    height: 320px;
+  }
+
+  .historyContent {
+    width: 680px;
+    height: 600px;
+    padding: 0px 0px 280px 2px;
+  }
+
+  .historyText {
+    font-size: 32px;
+    width: 680px;
+    height: 380px;
+  }
+
+  .playButton {
+    width: 200px;
+    height: 100px;
+    padding: 12px 24px;
+    left: 20px;
+    top: 380px;
+  }
+
+  .playButtonText {
+    font-size: 32px;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 640px) {
+  .container {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    padding: 15px;
+  }
+
+  .userImage {
+    width: 150px;
+    height: 150px;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+    position: absolute;
+  }
+
+  .avatarImage {
+    width: 150px;
+    height: 150px;
+  }
+
+  .greeting {
+    font-size: 32px;
+    width: 100%;
+    height: 50px;
+    left: 0;
+    top: 190px;
+    text-align: center;
+  }
+
+  .levelText {
+    font-size: 24px;
+    width: 100%;
+    height: 50px;
+    left: 0;
+    top: 260px;
+    text-align: center;
+  }
+
+  .historyFrame {
+    width: calc(100% - 30px);
+    height: 280px;
+    left: 15px;
+    top: 330px;
+  }
+
+  .historyBackground {
+    width: 100%;
+    height: 280px;
+  }
+
+  .historyContent {
+    width: calc(100% - 40px);
+    height: 500px;
+    padding: 0px 0px 220px 2px;
+    left: 10px;
+  }
+
+  .historyText {
+    font-size: 20px;
+    width: 100%;
+    height: 300px;
+  }
+
+  .playButton {
+    width: 180px;
+    height: 80px;
+    padding: 10px 20px;
+    left: 50%;
+    top: 630px;
+    transform: translateX(-50%);
+  }
+
+  .playButtonText {
+    font-size: 24px;
+  }
+}

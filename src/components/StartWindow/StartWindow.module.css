@@ -1,0 +1,144 @@
+.container {
+  width: 100%;
+  min-height: 650px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 45px 20px;
+  background-color: #fff;
+}
+
+.title {
+  font-family:
+    Inter,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  font-weight: 400;
+  font-size: 96px;
+  color: #000;
+  width: 805px;
+  max-width: 100%;
+  height: 176px;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.subtitle {
+  font-family:
+    Inter,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  color: #000;
+  width: 900px;
+  max-width: 100%;
+  height: 179px;
+  flex-shrink: 0;
+  text-align: center;
+  margin-bottom: 63px;
+}
+
+.loginButton {
+  display: flex;
+  width: 740px;
+  max-width: 100%;
+  padding: 11px 0px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  height: 70px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  position: relative;
+  background-color: #aaff98;
+}
+
+.registerButton {
+  display: flex;
+  width: 740px;
+  max-width: 100%;
+  padding: 11px 0px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  height: 70px;
+  cursor: pointer;
+  position: relative;
+  background-color: #aaff98;
+}
+
+.buttonText {
+  font-family:
+    Inter,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  color: #000;
+  text-align: center;
+  height: 48px;
+}
+
+@media (max-width: 991px) {
+  .title {
+    font-size: 72px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .subtitle {
+    font-size: 28px;
+    height: auto;
+    margin-bottom: 40px;
+  }
+
+  .loginButton,
+  .registerButton {
+    width: 90%;
+    max-width: 600px;
+  }
+
+  .buttonText {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 20px 15px;
+    min-height: 100vh;
+  }
+
+  .title {
+    font-size: 48px;
+    height: auto;
+    margin-bottom: 15px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+    height: auto;
+    margin-bottom: 30px;
+  }
+
+  .loginButton,
+  .registerButton {
+    width: 100%;
+    max-width: none;
+    height: 60px;
+    padding: 8px 0px;
+  }
+
+  .buttonText {
+    font-size: 28px;
+  }
+}

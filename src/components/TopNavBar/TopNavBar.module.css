@@ -1,0 +1,99 @@
+.topNavBar {
+  height: 60px;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid rgb(221, 221, 221);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  font-family: Arial, sans-serif;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logoIcon {
+  width: 32px;
+  height: 32px;
+  background-color: rgb(26, 115, 235);
+  color: white;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.logoText {
+  font-size: 18px;
+  font-weight: 500;
+  color: rgb(51, 51, 51);
+}
+
+.navControls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navButton {
+  height: 36px;
+  padding: 0 12px;
+  background-color: transparent;
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  color: rgb(51, 51, 51);
+  transition: all 0.2s ease;
+}
+
+.navButton:hover:not(:disabled) {
+  background-color: rgb(245, 245, 245);
+  border-color: rgb(204, 204, 204);
+}
+
+.navButton:disabled {
+  color: rgb(204, 204, 204);
+  cursor: not-allowed;
+}
+
+.saveButton {
+  height: 36px;
+  padding: 0 16px;
+  background-color: rgb(26, 115, 235);
+  border: 1px solid rgb(26, 115, 235);
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  color: white;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.saveButton:hover {
+  background-color: rgb(20, 100, 220);
+  border-color: rgb(20, 100, 220);
+}
+
+.buttonIcon {
+  font-size: 14px;
+  line-height: 1;
+}
+
+.buttonText {
+  font-size: 13px;
+  line-height: 1;
+}
