@@ -9,11 +9,16 @@ interface PlayerInfo {
     // другие поля по API, если есть
     history?: string; // пример — подставь реальные данные из API
 }
+interface PlayerStatisticsDto {
+    date: string | null; // может быть null
+    score: number;
+}
 
 function PersonalAccountWindow() {
     const [player, setPlayer] = useState<PlayerInfo | null>(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
+    const [history, setHistory] = useState<PlayerStatisticsDto | null>(null);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -26,7 +31,7 @@ function PersonalAccountWindow() {
 
         async function fetchPlayer() {
             try {
-                const response = await fetch("http://localhost:8001/players/", {
+                const response = await fetch("https://routinely-meet-sleeper.cloudpub.ru/players/", {
                     method: "GET",
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -55,7 +60,29 @@ function PersonalAccountWindow() {
             }
         }
 
-        fetchPlayer();
+        async function fetchHistory() {
+            try {
+                const response = await fetch("https://routinely-meet-sleeper.cloudpub.ru/players/statistics", {
+                    method: "GET",
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                        "Content-Type": "application/json",
+                    },
+                });
+
+                if (!response.ok) {
+                    console.error("Ошибка загрузки статистики", response.status);
+                    return;
+                }
+
+                const data: PlayerStatisticsDto = await response.json();
+                setHistory(data);
+            } catch (e) {
+                console.error("Ошибка при получении статистики:", e);
+            }
+        }
+
+        fetchPlayer().then(fetchHistory);
     }, []);
 
     const handlePlayClick = () => {
@@ -92,8 +119,15 @@ function PersonalAccountWindow() {
                 <div className={styles.historyBackground} />
                 <div className={styles.historyContent}>
                     <div className={styles.historyText}>
-                        {/* Здесь можно отобразить историю из player.history или другой структуры */}
-                        {player.history || "История пока недоступна"}
+                        {history && history.date ? (
+                            <div>
+                                Дата: {new Date(history.date).toLocaleDateString()} <br/>
+                                Счёт: {history.score} <br/>
+                                Игра: Найди слово
+                            </div>
+                        ) : (
+                            "История пока недоступна"
+                        )}
                     </div>
                 </div>
             </div>

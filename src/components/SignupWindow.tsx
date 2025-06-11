@@ -56,7 +56,7 @@ function SignupWindow({ onGoToLogin}: SignupWindowProps) {
     }
 
     try {
-      await postData("http://localhost:8001/user/register", {
+      await postData("https://routinely-meet-sleeper.cloudpub.ru/user/register", {
         email,
         username,
         password,
